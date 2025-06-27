@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govt Scheme Finder | India & Africa</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            opacity: 0.9;
+        }
+
+        /* Search Bar */
+        .search-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .search-bar button {
+            padding: 12px 20px;
+            background: #4b6cb7;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .filter-btn {
+            padding: 8px 15px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .filter-btn.active {
+            background: #4b6cb7;
+            color: white;
+        }
+
+        /* Scheme Cards Grid */
+        .schemes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .scheme-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .scheme-card:hover {
+            transform: translateY(-5px);
+        }
+        .scheme-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .scheme-info {
+            padding: 15px;
+        }
+        .scheme-info h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .scheme-info p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .scheme-info .tag {
+            display: inline-block;
+            background: #e1f0ff;
+            color: #4b6cb7;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .apply-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #4b6cb7;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Footer & Brother Sites */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        .brother-sites {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .brother-sites a {
+            color: #4b6cb7;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .search-bar {
+                flex-direction: column;
+            }
+            .schemes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Govt Scheme Finder</h1>
+            <p>Discover financial aid, grants, and programs in India & Africa</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-bar">
+                <input type="text" placeholder="Search schemes (e.g., 'agriculture', 'education')">
+                <button>Search</button>
+            </div>
+            <div class="filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">India</button>
+                <button class="filter-btn">Nigeria</button>
+                <button class="filter-btn">Kenya</button>
+                <button class="filter-btn">Agriculture</button>
+                <button class="filter-btn">Education</button>
+                <button class="filter-btn">Startups</button>
+            </div>
+        </section>
+
+        <!-- Schemes Grid -->
+        <section class="schemes-grid">
+            <!-- Scheme Card 1 -->
+            <div class="scheme-card">
+                <img src="https://via.placeholder.com/300x160?text=PM+Kisan" alt="PM Kisan Scheme">
+                <div class="scheme-info">
+                    <h3>PM Kisan Samman Nidhi</h3>
+                    <p>₹6,000/year for small farmers in India. Direct bank transfer.</p>
+                    <span class="tag">India</span>
+                    <span class="tag">Agriculture</span>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Scheme Card 2 -->
+            <div class="scheme-card">
+                <img src="https://via.placeholder.com/300x160?text=Youth+Fund" alt="Youth Fund">
+                <div class="scheme-info">
+                    <h3>Nigeria Youth Investment Fund</h3>
+                    <p>Up to ₦3M for entrepreneurs aged 18-35.</p>
+                    <span class="tag">Nigeria</span>
+                    <span class="tag">Startups</span>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Scheme Card 3 -->
+            <div class="scheme-card">
+                <img src="https://via.placeholder.com/300x160?text=UDISHA" alt="UDISHA">
+                <div class="scheme-info">
+                    <h3>UDISHA (India)</h3>
+                    <p>Skill development grants for women entrepreneurs.</p>
+                    <span class="tag">India</span>
+                    <span class="tag">Education</span>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Part of the <strong>Hustle Toolkit</strong> for entrepreneurs and job seekers</p>
+            <div class="brother-sites">
+                <a href="#">Side Hustle Generator</a>
+                <a href="#">Resume Builder</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Basic filter functionality (can be expanded with backend)
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                // Here you'd filter schemes dynamically (requires backend/API)
+            });
+        });
+    </script>
+</body>
+</html>
